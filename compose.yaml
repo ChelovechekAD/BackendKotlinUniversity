@@ -6,7 +6,7 @@ services:
       - 'POSTGRES_PASSWORD=1234'
       - 'POSTGRES_USER=chelovek'
     ports:
-      - '5432'
+      - '6000:5432'
     networks:
       - app_network
     healthcheck:
@@ -19,7 +19,7 @@ services:
     container_name: 'api-lab3'
     ports:
       - '8090:8080'
-    environment:
+    environment: 
       - 'DB_USER=chelovek'
       - 'DB_PASSWORD=1234'
       - 'DB_NAME=lab3_kotlin'

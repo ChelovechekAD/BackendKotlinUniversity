@@ -25,6 +25,9 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+gradlew.bat
+gradlew
+gradle
 
 ### NetBeans ###
 /nbproject/private/
