@@ -12,8 +12,6 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.concurrent.ExecutionException;
-
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
@@ -46,7 +44,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUser(String login) {
         return userRepository.findByLogin(login)
-                .orElseThrow(()-> LogExceptionWrapper.logErrorException(new NotFoundException(
+                .orElseThrow(() -> LogExceptionWrapper.logErrorException(new NotFoundException(
                         String.format(ErrorCode.ERR_USER_NOT_FOUND.getMessage(), login), ErrorCode.ERR_USER_NOT_FOUND)));
     }
 }
