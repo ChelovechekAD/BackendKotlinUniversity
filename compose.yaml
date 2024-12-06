@@ -18,7 +18,7 @@ services:
     build: .
     container_name: 'api-lab3'
     ports:
-      - '8090:8080'
+      - '8090:8090'
     environment:
       - 'DB_USER=chelovek'
       - 'DB_PASSWORD=1234'
@@ -29,5 +29,19 @@ services:
       - postgres
     networks:
       - app_network
+  pgadmin-ui:
+    image: dpage/pgadmin4
+    ports:
+      - "9999:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.admin
+      PGADMIN_DEFAULT_PASSWORD: 1234
+    networks:
+      - app_network
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
 networks:
   app_network:
+
+volumes:
+  pgadmin_data:
