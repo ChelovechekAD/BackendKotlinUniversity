@@ -24,11 +24,14 @@ VALUES (4, 'C++');
 
 
 INSERT INTO public.course(id, description, title, subject_id)
-VALUES (1, 'Вы тут это короче кодить научитесь.', 'Разработка энтерпрайз решений на Java', 1);
+VALUES (1, 'Вы тут это короче кодить научитесь.', 'Разработка энтерпрайз решений на Java', 1,
+        "https://www.orbitcybermatics.com/assets/img/javaimg.jpg");
 INSERT INTO public.course(id, description, title, subject_id)
-VALUES (2, 'Вы тут это короче кодить научитесь.', 'Программирование на Java', 1);
+VALUES (2, 'Вы тут это короче кодить научитесь.', 'Программирование на Java', 1,
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-VYftrBNDZDUw0UU1_laEDpKxiIatZXJR0Q&s");
 INSERT INTO public.course(id, description, title, subject_id)
-VALUES (3, 'Вы тут это короче кодить научитесь.', 'Программирование на Python', 2);
+VALUES (3, 'Вы тут это короче кодить научитесь.', 'Программирование на Python', 2,
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0F5w64_BnyNLBAT-BV_hjBBIAIKkPp-tq7A&s");
 INSERT INTO public.course(id, description, title, subject_id)
 VALUES (4, 'Вы тут это короче кодить научитесь.', 'Программирование на C++', 3);
 

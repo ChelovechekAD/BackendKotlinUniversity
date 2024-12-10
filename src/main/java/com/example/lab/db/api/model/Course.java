@@ -30,6 +30,9 @@ public class Course {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "image_url")
+    private String imageUrl;
+
     @OneToMany(mappedBy = "course")
     private Set<CourseGroup> additionalInfo;
 }
